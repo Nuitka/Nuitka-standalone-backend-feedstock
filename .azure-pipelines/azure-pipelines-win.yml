@@ -2,6 +2,9 @@
 # update the conda-forge.yml and/or the recipe/meta.yaml.
 # -*- mode: yaml -*-
 
+# Nuitka: Build when we push
+trigger:
+- '*'
 jobs:
 - job: win
   pool:
