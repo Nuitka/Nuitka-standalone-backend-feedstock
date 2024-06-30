@@ -1,0 +1,29 @@
+From af7e44c69bdd94fbac9e2c93d633e287240eff6c Mon Sep 17 00:00:00 2001
+From: Kay Hayen <kay.hayen@gmail.com>
+Date: Sun, 30 Jun 2024 10:48:02 +0200
+Subject: [PATCH 50/51] Nuitka: Make this API available
+
+* This is needed for extension module loading by
+  Nuitka, which doesn't use the built-in extension
+  module loader, because it may not even load from
+  a file.
+---
+ Include/internal/pycore_import.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Include/internal/pycore_import.h b/Include/internal/pycore_import.h
+index 290ba95e1a..4c4081da3b 100644
+--- a/Include/internal/pycore_import.h
++++ b/Include/internal/pycore_import.h
+@@ -128,7 +128,7 @@ extern void _PyImport_ClearCore(PyInterpreterState *interp);
+ 
+ extern Py_ssize_t _PyImport_GetNextModuleIndex(void);
+ extern const char * _PyImport_ResolveNameWithPackageContext(const char *name);
+-extern const char * _PyImport_SwapPackageContext(const char *newcontext);
++PyAPI_FUNC(const char *) _PyImport_SwapPackageContext(const char *newcontext);
+ 
+ extern int _PyImport_GetDLOpenFlags(PyInterpreterState *interp);
+ extern void _PyImport_SetDLOpenFlags(PyInterpreterState *interp, int new_val);
+-- 
+2.41.0.windows.3
+

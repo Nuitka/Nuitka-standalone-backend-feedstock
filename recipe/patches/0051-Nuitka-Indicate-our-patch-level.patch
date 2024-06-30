@@ -1,0 +1,24 @@
+From dae20346453f90bea48e3614bf0cf10f312e1cca Mon Sep 17 00:00:00 2001
+From: Kay Hayen <kay.hayen@gmail.com>
+Date: Sun, 30 Jun 2024 10:58:38 +0200
+Subject: [PATCH 51/51] Nuitka: Indicate our patch level
+
+---
+ Lib/platform.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Lib/platform.py b/Lib/platform.py
+index d6322c9d99..64dc0f4612 100644
+--- a/Lib/platform.py
++++ b/Lib/platform.py
+@@ -1440,6 +1440,7 @@ def freedesktop_os_release():
+ 
+     return _os_release_cache.copy()
+ 
++__nuitka_patch_level__ = 1
+ 
+ ### Command line interface
+ 
+-- 
+2.41.0.windows.3
+
