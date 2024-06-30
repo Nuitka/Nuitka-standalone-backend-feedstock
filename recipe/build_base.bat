@@ -44,6 +44,8 @@ if "%DEBUG_C%"=="yes" (
   set PGO=--pgo
 )
 
+:: Nuitka: We want PGO of course and should re-enable this.
+
 :: AP doesn't support PGO atm?
 set PGO=
 
