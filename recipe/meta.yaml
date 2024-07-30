@@ -46,7 +46,7 @@ source:
 {% else %}
   - url: https://github.com/Nuitka/Nuitka-standalone-backend/archive/refs/heads/main.zip
     # md5 from: https://www.python.org/downloads/release/python-{{ ver3nd }}{{ dev }}/
-    md5: d68f25193eec491eb54bc2ea664a05bd
+    md5: 9a9dcc7cef06e43b2aaae7277e2812fa
 {% endif %}
     patches:
       - patches/0001-Win32-Change-FD_SETSIZE-from-512-to-2048.patch
