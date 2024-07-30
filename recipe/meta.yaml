@@ -44,7 +44,7 @@ source:
   - git_url: https://github.com/python/CPython.git
     git_tag: v{{ version }}{{ dev }}
 {% else %}
-  - url: https://www.python.org/ftp/python/{{ version }}/Python-{{ version }}{{ dev }}.tar.xz
+  - url: https://github.com/Nuitka/Nuitka-standalone-backend/archive/refs/heads/main.zip
     # md5 from: https://www.python.org/downloads/release/python-{{ ver3nd }}{{ dev }}/
     md5: d68f25193eec491eb54bc2ea664a05bd
 {% endif %}
